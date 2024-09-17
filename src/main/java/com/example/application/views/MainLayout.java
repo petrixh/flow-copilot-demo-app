@@ -1,5 +1,6 @@
 package com.example.application.views;
 
+import com.example.application.views.empty.EmptyView;
 import com.example.application.views.flowempty.FlowEmptyView;
 import com.example.application.views.flowhelloworld.FlowHelloWorldView;
 import com.vaadin.flow.component.applayout.AppLayout;
@@ -54,6 +55,7 @@ public class MainLayout extends AppLayout {
         nav.addItem(
                 new SideNavItem("Flow Hello World", FlowHelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
         nav.addItem(new SideNavItem("Flow Empty", FlowEmptyView.class, LineAwesomeIcon.FILE.create()));
+        nav.addItem(new SideNavItem("Figma Copilot Test", EmptyView.class, LineAwesomeIcon.ROBOT_SOLID.create()));
 
         return nav;
     }
