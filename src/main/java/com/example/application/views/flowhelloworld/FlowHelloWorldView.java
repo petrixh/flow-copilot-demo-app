@@ -1,5 +1,9 @@
 package com.example.application.views.flowhelloworld;
 
+import com.vaadin.flow.component.combobox.ComboBox;
+
+import static com.vaadin.flow.i18n.I18NProvider.translate;
+
 import com.example.application.views.MainLayout;
 import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
@@ -18,8 +22,8 @@ public class FlowHelloWorldView extends HorizontalLayout {
     private Button sayHello;
 
     public FlowHelloWorldView() {
-        name = new TextField("Your name");
-        sayHello = new Button("Say hello");
+        name = new TextField(translate("vaadin-text-field.your-name-4.label"));
+        sayHello = new Button(translate("vaadin-button.element-5.text"));
         sayHello.addClickListener(e -> {
             Notification.show("Hello " + name.getValue());
         });
@@ -27,8 +31,9 @@ public class FlowHelloWorldView extends HorizontalLayout {
 
         setMargin(true);
         setVerticalComponentAlignment(Alignment.END, name, sayHello);
+        add(name);
+        add(sayHello);
 
-        add(name, sayHello);
     }
 
 }

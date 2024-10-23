@@ -1,5 +1,7 @@
 package com.example.application.views;
 
+import static com.vaadin.flow.i18n.I18NProvider.translate;
+
 import com.example.application.views.empty.EmptyView;
 import com.example.application.views.flowempty.FlowEmptyView;
 import com.example.application.views.flowhelloworld.FlowHelloWorldView;
@@ -40,7 +42,7 @@ public class MainLayout extends AppLayout {
     }
 
     private void addDrawerContent() {
-        Span appName = new Span("v24.5-flow-copilot");
+Span appName = new Span(translate("span.element-0.text"));
         appName.addClassNames(LumoUtility.FontWeight.SEMIBOLD, LumoUtility.FontSize.LARGE);
         Header header = new Header(appName);
 
@@ -51,11 +53,10 @@ public class MainLayout extends AppLayout {
 
     private SideNav createNavigation() {
         SideNav nav = new SideNav();
+nav.addItem(new SideNavItem(translate("vaadin-side-nav-item.element-1.label"), FlowHelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
+nav.addItem(new SideNavItem(translate("vaadin-side-nav-item.element-2.label"), FlowEmptyView.class, LineAwesomeIcon.FILE.create()));
+nav.addItem(new SideNavItem(translate("vaadin-side-nav-item.element-3.label"), EmptyView.class, LineAwesomeIcon.ROBOT_SOLID.create()));
 
-        nav.addItem(
-                new SideNavItem("Flow Hello World", FlowHelloWorldView.class, LineAwesomeIcon.GLOBE_SOLID.create()));
-        nav.addItem(new SideNavItem("Flow Empty", FlowEmptyView.class, LineAwesomeIcon.FILE.create()));
-        nav.addItem(new SideNavItem("Figma Copilot Test", EmptyView.class, LineAwesomeIcon.ROBOT_SOLID.create()));
 
         return nav;
     }
