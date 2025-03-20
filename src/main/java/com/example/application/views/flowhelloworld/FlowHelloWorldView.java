@@ -1,7 +1,5 @@
 package com.example.application.views.flowhelloworld;
 
-import com.vaadin.flow.component.combobox.ComboBox;
-
 import static com.vaadin.flow.i18n.I18NProvider.translate;
 
 import com.example.application.views.MainLayout;
@@ -12,7 +10,6 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.RouteAlias;
 
 @PageTitle("Flow Hello World")
 @Route(value = "", layout = MainLayout.class)
