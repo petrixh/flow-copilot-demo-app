@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <!-- Project from https://start.vaadin.com/project/abfc7677-5b53-4420-893f-14d2a9dbe2f3 -->
     <groupId>com.example.application</groupId>
-    <artifactId>v24.5-flow-copilot</artifactId>
-    <name>v24.5-flow-copilot</name>
+    <artifactId>flow-copilot-demo-app</artifactId>
+    <name>flow-copilot-demo-app</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
