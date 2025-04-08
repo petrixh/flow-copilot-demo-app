@@ -7,13 +7,14 @@ import com.vaadin.flow.component.Key;
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
 
 @PageTitle("Flow Hello World")
 @Route(value = "", layout = MainLayout.class)
-public class FlowHelloWorldView extends HorizontalLayout {
+public class FlowHelloWorldView extends VerticalLayout {
 
     private TextField name;
     private Button sayHello;
@@ -27,10 +28,10 @@ public class FlowHelloWorldView extends HorizontalLayout {
         sayHello.addClickShortcut(Key.ENTER);
 
         setMargin(true);
-        setVerticalComponentAlignment(Alignment.END, name, sayHello);
-        add(name);
-        add(sayHello);
-
+        HorizontalLayout hl = new HorizontalLayout(name, sayHello); 
+        hl.setVerticalComponentAlignment(Alignment.END, name, sayHello);
+        add(hl);
+    
     }
 
 }
