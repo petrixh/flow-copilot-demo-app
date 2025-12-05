@@ -22,7 +22,7 @@ ready to be deployed. The file can be found in the `target` folder after the bui
 Once the JAR file is built, you can run it using
 `java -jar target/v24.5-flow-copilot-1.0-SNAPSHOT.jar`
 
-## Project structure
+## Project structure (TODO update)
 
 - `MainLayout.java` in `src/main/java` contains the navigation setup (i.e., the
   side/top bar and the main menu). This setup uses
