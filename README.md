@@ -22,14 +22,14 @@ ready to be deployed. The file can be found in the `target` folder after the bui
 Once the JAR file is built, you can run it using
 `java -jar target/v24.5-flow-copilot-1.0-SNAPSHOT.jar`
 
-## Project structure (TODO update)
+## Project structure
 
-- `MainLayout.java` in `src/main/java` contains the navigation setup (i.e., the
+- `MainLayout.java` in `src/main/java/com/example/application/base/ui` contains the navigation setup (i.e., the
   side/top bar and the main menu). This setup uses
   [App Layout](https://vaadin.com/docs/components/app-layout).
-- `views` package in `src/main/java` contains the server-side Java views of your application.
-- `views` folder in `src/main/frontend` contains the client-side JavaScript views of your application.
-- `themes` folder in `src/main/frontend` contains the custom CSS styles.
+- `views` package in `src/main/java/com/example/application` contains the server-side Java views of your application.
+- `frontend` folder in `src/main` contains the client-side resources, including `index.html`.
+- `resources` folder in `src/main` contains application properties, icons, images, and i18n translations.
 
 ## Useful links
 
