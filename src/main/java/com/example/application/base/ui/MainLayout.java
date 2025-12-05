@@ -25,11 +25,11 @@ public final class MainLayout extends AppLayout {
 
     private Component createHeader() {
         // TODO Replace with real application logo and name
-        var appLogo = VaadinIcon.CUBES.create();
+        var appLogo = VaadinIcon.ROAD_BRANCHES.create();
         appLogo.setSize("48px");
-        appLogo.setColor("green");
+        appLogo.setColor("blue");
 
-        var appName = new Span("My Application");
+        var appName = new Span("Flow Copilot");
         appName.getStyle().setFontWeight(Style.FontWeight.BOLD);
 
         var header = new VerticalLayout(appLogo, appName);
